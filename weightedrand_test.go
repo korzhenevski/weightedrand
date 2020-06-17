@@ -27,7 +27,7 @@ func mockChoices(n int) []Choice {
 // returned more often than choices with a lower weight.
 func TestWeightedChoice(t *testing.T) {
 	// Make weighted choices
-	var choices []Choice
+	var choices []Choice(int)
 	chosenCount := make(map[int]int)
 
 	/* Similar to what is used in randutil test, but in randomized order to
@@ -46,7 +46,7 @@ func TestWeightedChoice(t *testing.T) {
 	t.Log("values in chooser", chooser.totals)
 	for i := 0; i < 1000000; i++ {
 		c := chooser.Pick()
-		chosenCount[c.(int)]++
+		chosenCount[c]++
 	}
 
 	// Ensure weight 0 results in no results
