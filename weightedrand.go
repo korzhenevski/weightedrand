@@ -35,7 +35,7 @@ type Chooser struct {
 }
 
 // NewChooser initializes a new Chooser for picking from the provided Choices.
-func NewChooser(cs ...Choice) Chooser {
+func NewChooser(cs []Choice) Chooser {
 	sort.Slice(cs, func(i, j int) bool {
 		return cs[i].Weight < cs[j].Weight
 	})
