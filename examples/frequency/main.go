@@ -5,7 +5,7 @@ import (
 	"math/rand"
 	"time"
 
-	wr "github.com/mroth/weightedrand"
+	wr "github.com/korzhenevski/weightedrand"
 )
 
 func main() {
